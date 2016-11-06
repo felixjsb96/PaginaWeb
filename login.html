@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>--Login--</title>
+<link rel="stylesheet" type="text/css" href="style/estilos.css" />
+<script type="text/javascript" src="query.js"></script>
+<script type="text/javascript">
+function valida() {
+   if(document.fvalida.username.value.legth==0){
+  alert("Ingres Usuario")
+  document.fvalida.username.focus()
+  return 0;
+  }
+ 
+  return 0;
+}
+</script>
+<body>
+<div class="login-page">
+  <div class="form">
+    <form class="login-form" action="validar.php" method="POST">
+      <input type="text" placeholder="username" name = "username"/>
+      <input type="password" placeholder="password" name="password"/>
+	  <input class="button" type="submit" value="Ingresar" onclick="valida()"/>
+      <p class="message"><a href="#">Olvide mi Contrase&ntilde;a</a></p>
+    </form>
+  </div>
+</div>
+</body>
+</html>
