@@ -37,6 +37,7 @@ include_once '../controller/matricula.controller.php';
         width: 100%;
         margin: 1em 0 2em;
         border-collapse: collapse;
+		background:#33FF9F;
     }
 
     caption {
@@ -49,6 +50,10 @@ include_once '../controller/matricula.controller.php';
     }
 
     th {
+		background-color:#33FF9F;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		color:#993300;
         text-align: left;
         padding: .5em .5em;
         font-weight: bold;
@@ -57,6 +62,10 @@ include_once '../controller/matricula.controller.php';
     }
 
     td {
+		background-color:#D9EEE2;
+		font-family:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		color:#4B1313;
         padding: .5em .5em;
         border-bottom: solid 1px #ccc;
     }
@@ -66,10 +75,11 @@ include_once '../controller/matricula.controller.php';
 	</head>
 
 <body>
-	
-	<div>
+	<div class="container">
+	<div >
 	<form method="POST" action="../controller/controller.php">
-	<table class='respond' border="0px" WIDTH='100'>
+	<table class="table table-hover" border="0px" WIDTH='100'>
+	
 	<tr><td>Alumno: </td><td class="respond"><input type="text" name ="alumno"/></td></tr>
 	<tr><td>Grado: </td><td class="respond"><select name="grado">
 											<option value="00001">Primer Grado</option>
@@ -85,12 +95,15 @@ include_once '../controller/matricula.controller.php';
 	</div>
 	<div class="wrap">
 	
-	<table class='respond' border='2px' WIDTH='100'>
+	<table class="table table-hover" border='2px' WIDTH='100'>
+	<thead>
     <tr><td>Numero</td><td>Fecha</td><td>Grado</td><td>Nombre del Alumno</td><td>Apellido del Alumno</td><td colspan="2">Encargado de matricula</td></tr>
+	</thead>
 	<?php
 	$mat= new MatriculaController();
 	$lista=$mat->Listar();
 	foreach($lista as $columna){
+		echo ("<tbody>");
 		echo ("<tr>");
 		echo("<td>".$columna->codigo_matricula."</td>");
 		echo("<td>".$columna->fecha."</td>");
@@ -99,10 +112,13 @@ include_once '../controller/matricula.controller.php';
 		echo("<td>".$columna->apellido."</td>");
 		echo("<td>".$columna->nombre_empleado."</td>");
 		echo("<td>".$columna->apellido_empleado."</td>");
+		echo ("</tr>");
+		echo ("</tbody>");
 	}
 	?>
 	</TABLE>
 	</div>
-</body>
+</div>
+	</body>
 
 </html>
