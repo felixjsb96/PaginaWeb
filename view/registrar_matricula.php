@@ -14,6 +14,12 @@ include_once '../controller/matricula.controller.php';
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
 		<meta charset="utf-8">
 		<title>--Menu--</title>
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
 		<link href="../assets/style/style.css" media="screen" rel="stylesheet" type="text/css" />
 		<link href="../assets/style/iconic.css" media="screen" rel="stylesheet" type="text/css" />
 		<script src="../assets/js/prefix-free.js"></script>
@@ -37,7 +43,7 @@ include_once '../controller/matricula.controller.php';
         width: 100%;
         margin: 1em 0 2em;
         border-collapse: collapse;
-		background:#33FF9F;
+		
     }
 
     caption {
@@ -62,7 +68,7 @@ include_once '../controller/matricula.controller.php';
     }
 
     td {
-		background-color:#D9EEE2;
+		
 		font-family:Arial, Helvetica, sans-serif;
 		font-size:12px;
 		color:#4B1313;
@@ -78,7 +84,7 @@ include_once '../controller/matricula.controller.php';
 	<div class="container">
 	<div >
 	<form method="POST" action="../controller/controller.php">
-	<table class="table table-hover" border="0px" WIDTH='100'>
+	<table class="table table-striped" border="0px" WIDTH='100'>
 	
 	<tr><td>Alumno: </td><td class="respond"><input type="text" name ="alumno"/></td></tr>
 	<tr><td>Grado: </td><td class="respond"><select name="grado">
@@ -119,6 +125,12 @@ include_once '../controller/matricula.controller.php';
 	</TABLE>
 	</div>
 </div>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>		
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>    
+<script src="../assets/js/jquery.responsive-tables.min.js"></script>
+<script src="../assets/js/app.js"></script>
 	</body>
 
 </html>
